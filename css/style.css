@@ -1,0 +1,81 @@
+:root {
+  --accent:#C7763E;
+  --background:#A55C30;
+  --color:#232730;
+}
+
+.title {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 61px;
+  color: var(--background);
+}
+
+.info * + * {
+  margin-top: 16px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 145%;
+  color: var(--color);
+}
+
+.wrapper {
+  padding: 107px 123px 129px 123px;
+  margin: auto;
+}
+
+.Fleet__wrapper {
+  padding: 59px 45px 184px 45px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header__logo {
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 41px;
+  /* identical to box height */
+  color: #A55C30;
+}
+
+.promo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.promo__title {
+  max-width: 457px;
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 82px;
+}
+.promo__title::before {
+  content: "";
+  display: block;
+  width: 9px;
+  height: 261px;
+  margin-right: 47px;
+  float: left;
+  background: #F8D7A4;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.nav__list * + * {
+  margin-left: 48px;
+}
