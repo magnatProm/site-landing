@@ -4,19 +4,29 @@
 body{
     font-family: 'Poppins', sans-serif;
 font-weight: 400;
-font-size: 16px;
+font-size: 15px;
 line-height: 145%;
 
 color: var(--color);
 }
+[class*="item"]:hover{
+    color: var(--background);
+}
 .wrapper{
-    padding: 107px 123px 129px 123px;
+    padding: 107px 107px 129px 123px;
     margin: auto;
+    max-width: 1440px;
 }
 .Fleet__wrapper{
     padding: 59px 45px 184px 45px;
 }
 
+.main{position: relative;}
+svg{
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
 .header{
     display: flex;
     &__logo{
@@ -28,16 +38,24 @@ line-height: 41px;
 /* identical to box height */
 color: #A55C30;
     }
+    &__span{
+        font-weight:400;
+        font-style: italic;
+    }
 }
+// font-size: 32px;
 .promo{
     display: flex;
     &__title{
-        max-width: 457px;
+        max-width: 492px;
     font-family: 'Lora';
 font-style: normal;
 font-weight: 700;
-font-size: 64px;
-line-height: 82px;}
+// font-size: 64px;
+font-size: clamp(2rem, 1.429rem + 2.86vw, 4rem);
+// line-height: 82px;
+line-height: clamp(2.563rem, 1.83rem + 3.66vw, 5.125rem);
+}
 &__title::before{
     content: "";
     display: block;
@@ -48,6 +66,12 @@ float: left;
 
 background: #F8D7A4;
 }
+&__img{
+    width: 744px;
+    height: 496px;
+    object-fit: cover;
+    object-position: -36px;
+}
 }
 .nav{
     &__list{
@@ -56,4 +80,8 @@ background: #F8D7A4;
     &__list * + *{
         margin-left: 48px;
     }
+}
+.about{
+    display: flex;
+    &__box{padding: 81px 0px 0px 133px;}
 }

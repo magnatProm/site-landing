@@ -1,0 +1,12 @@
+.title{
+    font-family: 'Lora';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 61px;
+
+color: var(--background);
+}
+.info * + *{
+    margin-top: 18px;
+}
