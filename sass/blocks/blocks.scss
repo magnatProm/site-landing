@@ -8,16 +8,23 @@
     color: var(--background);
 }
 
+.btn-main {
+    background: #A55C30;
+    padding: 19px 99px;
+    color: var(--color_in_black);
+}
+
 .info *+* {
     margin-top: 18px;
 }
 
-.background__blakc{
+.background__blakc {
     background: rgba(35, 34, 34, 0.96);
-background-blend-mode: multiply;
-color: var(--color_in_black);
+    background-blend-mode: multiply;
+    color: var(--color_in_black);
 }
-.background__light{
+
+.background__light {
     background: var(--background_light);
 }
 

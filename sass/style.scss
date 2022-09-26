@@ -215,3 +215,45 @@ svg {
     }
 
 }
+
+.banner {
+    padding: clamp(3.25rem, 2.732rem + 2.59vw, 5.063rem) 20px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
+
+    background: linear-gradient(0deg, rgba(35, 34, 34, 0.92), rgba(35, 34, 34, 0.92)), url(../img/car.png);
+    background-blend-mode: multiply, normal;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: var(--color_in_black);
+
+    &__title {
+        font-weight: 600;
+        font-size: 56px;
+    }
+}
+
+.contact{
+    &__form{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        background: #E8EAEC;
+        max-width: 727px;
+        gap: 22px;
+
+        padding: 116px 142px;
+    }
+    &__input{
+        background: #FFFFFF;
+border: 0.5px solid #D2D2D2;
+    }
+}
+
+.footer{
+    &__content {
+    }
+}

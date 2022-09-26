@@ -7,6 +7,12 @@
   color: var(--background);
 }
 
+.btn-main {
+  background: #A55C30;
+  padding: 19px 99px;
+  color: var(--color_in_black);
+}
+
 .info * + * {
   margin-top: 18px;
 }
