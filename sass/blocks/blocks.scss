@@ -1,12 +1,35 @@
-.title{
+.title {
     font-family: 'Lora';
-font-style: normal;
-font-weight: 700;
-font-size: 48px;
-line-height: 61px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 61px;
 
-color: var(--background);
+    color: var(--background);
 }
-.info * + *{
+
+.info *+* {
     margin-top: 18px;
+}
+
+.background__blakc{
+    background: rgba(35, 34, 34, 0.96);
+background-blend-mode: multiply;
+color: var(--color_in_black);
+}
+.background__light{
+    background: var(--background_light);
+}
+
+.card {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 24px;
+        letter-spacing: -0.002em;
+    }
 }

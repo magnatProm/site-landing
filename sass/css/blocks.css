@@ -10,3 +10,21 @@
 .info * + * {
   margin-top: 18px;
 }
+
+.background__blakc {
+  background: rgba(35, 34, 34, 0.96);
+  background-blend-mode: multiply;
+  color: var(--color_in_black);
+}
+
+.card {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.card__subtitle {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 24px;
+  letter-spacing: -0.002em;
+}

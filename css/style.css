@@ -2,6 +2,7 @@
   --accent:#C7763E;
   --background:#A55C30;
   --color:#232730;
+  --color_in_black:#FFFFFF;
 }
 
 .title {
@@ -15,6 +16,24 @@
 
 .info * + * {
   margin-top: 18px;
+}
+
+.background__blakc {
+  background: rgba(35, 34, 34, 0.96);
+  background-blend-mode: multiply;
+  color: var(--color_in_black);
+}
+
+.card {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.card__subtitle {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 24px;
+  letter-spacing: -0.002em;
 }
 
 body {
@@ -59,7 +78,6 @@ svg {
   font-weight: 700;
   font-size: 32px;
   line-height: 41px;
-  /* identical to box height */
   color: #A55C30;
 }
 .header__span {
@@ -113,5 +131,78 @@ svg {
   display: flex;
 }
 .about__box {
-  padding: 81px 0px 0px 133px;
+  padding-top: clamp(0.625rem, -0.643rem + 6.34vw, 5.063rem);
+  padding-left: clamp(1.875rem, 0.036rem + 9.2vw, 8.313rem);
+}
+.about__title {
+  font-size: 40px;
+}
+
+.background_img {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.91)), to(rgba(0, 0, 0, 0.91))), url(../img/car.png);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.91), rgba(0, 0, 0, 0.91)), url(../img/car.png);
+  background-blend-mode: multiply, normal;
+  background-repeat: no-repeat;
+  background-position: revert;
+  background-attachment: fixed;
+}
+
+.Services__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: clamp(2.813rem, 1.134rem + 8.39vw, 8.688rem);
+     -moz-column-gap: clamp(2.813rem, 1.134rem + 8.39vw, 8.688rem);
+          column-gap: clamp(2.813rem, 1.134rem + 8.39vw, 8.688rem);
+  row-gap: 56px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--color_in_black);
+}
+.Services__content * {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 305px;
+          flex: 0 0 305px;
+}
+
+.Fleet__wrapper {
+  padding: 50px;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.slider__window {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.slider__control {
+  width: 36px;
+  height: 36px;
+  background: #F8D7A4;
+  border-radius: 50%;
+}
+
+.amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.amount__numder {
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 98px;
+}
+.amount__text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33px;
 }
