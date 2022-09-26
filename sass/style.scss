@@ -170,3 +170,48 @@ svg {
         line-height: 33px;
     }
 }
+
+.testimonials {
+    &__box {
+        background: #FFFFFF;
+        box-shadow: 5px 15px 33px rgba(0, 0, 0, 0.1);
+        // padding: 72px 129px;
+        padding: clamp(3.438rem, 3.134rem + 1.52vw, 4.5rem) clamp(3.438rem, 2.277rem + 5.8vw, 7.5rem);
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    // &__box * > *:nth-child(1){
+    //     flex: 1 1 219px;
+    // }
+    &__box * {
+        flex: 1 1 219px;
+    }
+
+    &__img {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+    }
+
+    &__name {
+        font-weight: 700;
+        font-size: 32px;
+    }
+
+    &__slogan {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 150%;
+        color: #979797;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 150%;
+        flex-grow: 2;
+    }
+
+}

@@ -1,6 +1,7 @@
 :root {
   --accent:#C7763E;
   --background:#A55C30;
+  --background_light:#F8D7A4;
   --color:#232730;
   --color_in_black:#FFFFFF;
 }
@@ -22,6 +23,10 @@
   background: rgba(35, 34, 34, 0.96);
   background-blend-mode: multiply;
   color: var(--color_in_black);
+}
+
+.background__light {
+  background: var(--background_light);
 }
 
 .card {
@@ -143,7 +148,7 @@ svg {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.91), rgba(0, 0, 0, 0.91)), url(../img/car.png);
   background-blend-mode: multiply, normal;
   background-repeat: no-repeat;
-  background-position: revert;
+  background-position: center;
   background-attachment: fixed;
 }
 
@@ -157,9 +162,8 @@ svg {
   row-gap: 56px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   color: var(--color_in_black);
 }
 .Services__content * {
@@ -205,4 +209,44 @@ svg {
   font-weight: 400;
   font-size: 24px;
   line-height: 33px;
+}
+
+.testimonials__box {
+  background: #FFFFFF;
+  -webkit-box-shadow: 5px 15px 33px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 15px 33px rgba(0, 0, 0, 0.1);
+  padding: clamp(3.438rem, 3.134rem + 1.52vw, 4.5rem) clamp(3.438rem, 2.277rem + 5.8vw, 7.5rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.testimonials__box * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 219px;
+          flex: 1 1 219px;
+}
+.testimonials__img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+}
+.testimonials__name {
+  font-weight: 700;
+  font-size: 32px;
+}
+.testimonials__slogan {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 150%;
+  color: #979797;
+}
+.testimonials__text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
 }

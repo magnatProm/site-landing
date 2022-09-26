@@ -17,6 +17,10 @@
   color: var(--color_in_black);
 }
 
+.background__light {
+  background: var(--background_light);
+}
+
 .card {
   font-weight: 400;
   font-size: 16px;
