@@ -53,7 +53,9 @@ svg {
 }
 
 .promo {
-    display: flex;
+    // display: flex;
+    display: grid;
+    grid-template-columns: 491px max-content;
 
     &__title {
         max-width: 492px;
@@ -235,7 +237,7 @@ svg {
         font-size: 56px;
     }
 }
-
+// padding: 32px 26px;
 .contact{
     &__form{
         margin: auto;
@@ -245,15 +247,56 @@ svg {
         max-width: 727px;
         gap: 22px;
 
-        padding: 116px 142px;
+        padding: clamp(2rem, 0.5rem + 7.5vw, 7.25rem) clamp(1.625rem, -0.446rem + 10.36vw, 8.875rem);
+        // padding: 116px 142px;
     }
-    &__input{
-        background: #FFFFFF;
-border: 0.5px solid #D2D2D2;
-    }
+//     &__input{
+//         background: #FFFFFF;
+// border: 0.5px solid #D2D2D2;
+// padding: 16px;
+//     }
 }
 
 .footer{
+    background: #0C0C0C;
+    color: var(--color_in_black);
     &__content {
+        display: flex;
+        // column-gap: clamp(2.813rem, 1.134rem + 8.39vw, 8.688rem);
+        // row-gap: 56px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        row-gap: 88px;
+        column-gap: 120px;
+    }
+    &__content * {
+        flex: 0 0 263px;
+    }
+    &__content *:nth-child(2) {
+        flex-grow: 1;
+    }
+    &__title{
+        font-size: 32px;
+    }
+    &__input{
+        width: 62%;
+        /* width: 278px;*/
+        margin-right: 14px;
+    }
+    &__btn{
+        padding: 19px 30px;
+    }
+    &__icon{display: -webkit-inline-box;}
+    &__icon::before{
+        content: attr(data-icon);
+        display: block;
+        font-size: 28px;
+        margin-right: 27px;
+    }
+    &__icons{
+        display: flex;
+    }
+    &__icons *{
+        flex: 1 1 auto;
     }
 }
