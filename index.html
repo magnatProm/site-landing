@@ -14,14 +14,20 @@
 
     <link rel="stylesheet" href="css/null.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <script defer src="js.js"></script>
+
 </head>
 
-<body>
+<body class="background_red">
     <main class="main">
         <section class="wrapper">
-            <header class="header">
+            <header class="header wrapper">
                 <p class="header__logo">Lux<span class="header__span">Chaffeur</span></p>
-                <nav class="nav">
+
+                <div class="menu-btn"><span class="menu-btn__line"></span></div>
+
+                <nav class="nav text-align-none">
                     <ul class="nav__list">
                         <li class="nav__item">Home</li>
                         <li class="nav__item">About</li>
@@ -32,7 +38,7 @@
                 </nav>
             </header>
             <div class="promo">
-                <h1 class="promo__title">
+                <h1 class="promo__title text-align-none">
                     Premium<br>and Luxurious Chauffeur Services
                 </h1>
                 <img class="promo__img" src="img/header_image.png" alt="car">
@@ -46,7 +52,7 @@
         <section class="wrapper">
             <div class="about">
                 <img src="img/About_image.png" alt="About">
-                <div class="about__box info">
+                <div class="about__box info text-align-none">
                     <h4 class="title about__title">About</h4>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. We are known for luxurious and
@@ -64,10 +70,10 @@
         </section>
         <section class="background_img">
             <div class="Services wrapper">
-                <h3 class="title">Services</h3>
+                <h3 class="title main-title">Services</h3>
                 <div class="Services__content">
                     <div class="card">
-                        <img src="" alt="img">
+                        <img class="card__img" src="./img/icon/icon_1.png" alt="img">
                         <div class="info">
                             <h5 class="card__subtitle">Lorem ipsum dolor sit amet</h5>
                             <p> consectetur adipiscing elit. Interdum parturient laoreet nibh vitae in duis eu vel.
@@ -77,7 +83,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="" alt="img">
+                        <img class="card__img" src="./img/icon/icon_2.png" alt="img">
                         <div class="info">
                             <h5 class="card__subtitle">Lorem ipsum dolor sit amet</h5>
                             <p> consectetur adipiscing elit. Interdum parturient laoreet nibh vitae in duis eu vel.
@@ -87,7 +93,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="" alt="img">
+                        <img class="card__img" src="./img/icon/icon_3.png" alt="img">
                         <div class="info">
                             <h5 class="card__subtitle">Lorem ipsum dolor sit amet</h5>
                             <p> consectetur adipiscing elit. Interdum parturient laoreet nibh vitae in duis eu vel.
@@ -101,27 +107,13 @@
         </section>
         <section>
             <div class="Fleet Fleet__wrapper">
-                <h3 class="title">Fleet</h3>
+                <h3 class="title main-title">Fleet</h3>
 
                 <div class="Fleet__content">
                     <div class="slider">
                         <button class="slider__control">&#10096;</button>
                         <div class="slider__window">
                             <div class="slider__carousel">
-
-                                <div class="card">
-                                    <img src="" alt="img">
-                                    <div class="info">
-                                        <h5 class="card__subtitle">Lorem ipsum dolor sit amet</h5>
-                                        <p> consectetur adipiscing elit. Interdum parturient laoreet nibh vitae in duis
-                                            eu vel.
-                                            Sagittis eget volutpat ac quisque</p>
-                                        <p> consectetur adipiscing elit. Interdum parturient laoreet nibh vitae in duis
-                                            eu vel.
-                                            Sagittis eget volutpat ac quisque</p>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                         <button class="slider__control">&#10097;</button>
@@ -147,53 +139,106 @@
         </section>
         <section class="background__light">
             <div class="testimonials wrapper">
-                <h4 class="title">Testimonials</h4>
-                <div class="testimonials__content">
+                <h4 class="title main-title">Testimonials</h4>
+                <div class="testimonials__content info">
                     <div class="testimonials__box">
                         <figure class="testimonials__user">
-                            <img class="testimonials__img" src="" alt="user">
+                            <img class="testimonials__img" src="./img/user.jpg" alt="user">
                             <figcaption>
                                 <p class="testimonials__name">Annie Rudy</p>
                                 <p class="testimonials__slogan">Las vegas</p>
                             </figcaption>
                         </figure>
-                        <div class="testimonials__text">
+                        <div class="testimonials__text info">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis dui nec massa enim
                                 scelerisque scelerisque maecenas lectus. Tincidunt posuere nunc at amet, in. Enim
                                 ullamcorper lectus viverra donec. At faucibus nunc vel viverra massa malesuada leo
                                 iaculis tellus.</p>
+                            <div class="testimonials__grade">
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                            </div>
                         </div>
                     </div>
+                    <div class="testimonials__box">
+                        <figure class="testimonials__user">
+                            <img class="testimonials__img" src="./img/user.jpg" alt="user">
+                            <figcaption>
+                                <p class="testimonials__name">cats</p>
+                                <p class="testimonials__slogan">Las vegas</p>
+                            </figcaption>
+                        </figure>
+                        <div class="testimonials__text info">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis dui nec massa enim
+                                scelerisque scelerisque maecenas lectus. Tincidunt posuere nunc at amet, in. Enim
+                                ullamcorper lectus viverra donec. At faucibus nunc vel viverra massa malesuada leo
+                                iaculis tellus.</p>
+                            <div class="testimonials__grade">
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonials__box">
+                        <figure class="testimonials__user">
+                            <img class="testimonials__img" src="./img/user.jpg" alt="user">
+                            <figcaption>
+                                <p class="testimonials__name">meth</p>
+                                <p class="testimonials__slogan">Las vegas</p>
+                            </figcaption>
+                        </figure>
+                        <div class="testimonials__text info">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis dui nec massa enim
+                                scelerisque scelerisque maecenas lectus. Tincidunt posuere nunc at amet, in. Enim
+                            </p>
+                            <div class="testimonials__grade">
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonials__numder">
+                        <span class="numder__element" onclick="showSlides(1)"></span> 
+                        <span class="numder__element" onclick="showSlides(2)"></span> 
+                        <span class="numder__element" onclick="showSlides(3)"></span> 
+                      </div>
                 </div>
             </div>
         </section>
         <section class="banner">
-                <div class="banner__content">
-                    <p>We offer the best you can imagine</p>
-                    <p class="banner__title">Call Now for booking 01477 678905</p>
-                </div>
+            <div class="banner__content">
+                <p>We offer the best you can imagine</p>
+                <p class="banner__title">Call Now for booking 01477 678905</p>
+            </div>
         </section>
         <section class="wrapper">
             <div class="contact">
-                <h4 class="title">Contact</h4>
-                    <form class="contact__form">
-                        <input class="contact__input" name="name" type="text" placeholder="Your Name">
-                        <input class="contact__input" name="email" type="email" placeholder="Email">
-                        <select class="contact__input" name="blacklist">
-                            <option value="2PAC">car1</option>
-                            <option value="50cent">car2</option>
-                            <option value="Snoop Dogg" selected="">Type of car</option>
-                        </select>
-                        <textarea class="contact__input" placeholder="Your Details" rows="10" cols="30" style="resize: vertical;"></textarea>
-                        <button class="btn-main">SEND</button>
-                    </form>
+                <h4 class="title main-title">Contact</h4>
+                <form class="contact__form">
+                    <input class="contact__input" name="name" type="text" placeholder="Your Name">
+                    <input class="contact__input" name="email" type="email" placeholder="Email">
+                    <select class="contact__input" name="blacklist">
+                        <option value="2PAC">car1</option>
+                        <option value="50cent">car2</option>
+                        <option value="Snoop Dogg" selected="">Type of car</option>
+                    </select>
+                    <textarea class="contact__input" placeholder="Your Details" rows="10" cols="30"
+                        style="resize: vertical;"></textarea>
+                    <button class="btn-main">SEND</button>
+                </form>
             </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="footer__content wrapper">
-            <div class="info">
+            <div class="info text-align-none">
                 <p class="title footer__title">LuxChaffeur</p>
                 <p>We are known for luxurious and
                     premium chaffeur services worldwide. We are simply the best
@@ -204,30 +249,38 @@
             <div class="info">
                 <p class="title footer__title">News Letter</p>
                 <p>Subscribe to our news letter for updates, news and exclusive offers</p>
-                <!-- <div class="d"> -->
-                    <input class="footer__input" name="email" type="email" placeholder="Email">
-                    <button class="btn-main footer__btn">Subscribe</button>
-                <!-- </div> -->
-
-                <div class="footer__icons">
-                    <div class="icon">1</div>
-                    <div class="icon">1</div>
-                    <div class="icon">1</div>
-                </div>
-
+                <input class="footer__input" name="email" type="email" placeholder="Email">
+                <button class="btn-main footer__btn">Subscribe</button>
             </div>
 
             <div class="info">
                 <p class="title footer__title">Contact</p>
-                <ul class="list">
-                    <li data-icon="&#64;" class="footer__icon"><p>2038 2nd Avenue, Las Vegas, United States</p></li>
-                    <li data-icon="&#9742;" class="footer__icon"><a href="tel:+#">01477 342123</a><br><a href="tel:+#">01477 342123</a></li>
-                    <li data-icon="&#9993;" class="footer__icon"><a href="mailto:#">info@luxchauffeur.com</a></li>
+                <ul class="info text-align-none">
+                    <li data-icon="&#64;" class="footer__icon">
+                        <p>2038 2nd Avenue, Las Vegas, United States</p>
+                    </li>
+                    <li data-icon="&#9742;" class="footer__icon">
+                        <a class="footer__link" href="tel:+#">01477 342123</a><br>
+                        <a class="footer__link" href="tel:+#">01477 342123</a>
+                    </li>
+                    <li data-icon="&#9993;" class="footer__icon">
+                        <a class="footer__link" href="mailto:#">info@luxchauffeur.com</a>
+                    </li>
                 </ul>
             </div>
 
-        </div>
+            <div class="footer__icons info">
+                <ul class="footer__list">
+                    <li class="footer__item"><img src="./img/icon/icon-setting.svg" alt="icon"></li>
+                    <li class="footer__item"><img src="./img/icon/icon-shuffle.svg" alt="icon"></li>
+                    <li class="footer__item"><img src="./img/icon/icon-vk.svg" alt="icon"></li>
+                </ul>
+                <hr class="footer__line">
+                <p>© Copyright 2020 · LuxChauffeur All rights reserved</p>
+            </div>
 
+        </div>
+        <script src="Object.js"></script>
     </footer>
 </body>
 

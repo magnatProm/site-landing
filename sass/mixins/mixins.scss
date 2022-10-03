@@ -1,0 +1,22 @@
+@mixin flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@mixin text_style($weight, $size, $distance) {
+    font-weight: $weight;
+    font-size: $size ;
+    line-height: $distance;
+}
+
+@mixin text_r($weight, $size, $distance) {
+    flex: $weight $size $distance;
+}
+
+@mixin img {
+    background-blend-mode: multiply, normal;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
