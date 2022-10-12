@@ -3,6 +3,20 @@ document.querySelector('.menu-btn').addEventListener('click', function (){
   document.querySelector('.nav__list').classList.toggle('nav__list_active');
 })
 
+
+document.querySelector('.nav__list').addEventListener('click', (event) => {
+  const text = event.target.innerHTML.toLowerCase();
+  const anchor = document.querySelector(`[data-wotor="${text}"]`)
+
+  if (event.target.closest('.nav__item')) {
+        window.scrollTo({
+          left: 0,
+          top: anchor.offsetTop
+    })
+  }
+})
+
+
 // slider
 let slideIndex = 1;
 
@@ -165,6 +179,10 @@ function transform(sum){
 // Effect
 
 onload = function () {
-  document.querySelector('body').classList.remove('background_red')
-  document.querySelector('.promo__img').style="animation: cars 1s cubic-bezier(0.22, 0.61, 0.36, 1) 1s 1 normal backwards;";
+  document.querySelector('.loading').classList.add('finale');
+
+  setTimeout(() => {
+    document.querySelector('.loading').style.display="none";
+  }, 3000);
+  document.querySelector('.promo__img').style="animation: cars 1s cubic-bezier(0.22, 0.61, 0.36, 1) 3s 1 normal backwards;";
 };
