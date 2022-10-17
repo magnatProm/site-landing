@@ -198,13 +198,13 @@ body {
     }
 
     &::before {
-        top: 0;
-        animation: finale_1 0.5s linear 2.3s 1 alternate backwards;
+        top: 1px;
+        animation: finale_1 0.5s linear 2.3s 1 alternate forwards;
     }
 
     &::after {
         bottom: 0;
-        animation: finale_2 0.5s linear 2.3s 1 alternate backwards;
+        animation: finale_2 0.5s linear 2.3s 1 alternate forwards;
     }
 }
 
@@ -422,7 +422,7 @@ body {
     @include img;
 }
 
-.Services {
+.services {
     &__content {
         @include flex;
         column-gap: clamp(2.813rem, 1.134rem + 8.39vw, 8.688rem);
@@ -455,7 +455,7 @@ body {
     }
 }
 
-.Fleet__wrapper {
+.fleet__wrapper {
     padding: 50px;
 
     @media (max-width:530px) {
@@ -546,12 +546,19 @@ body {
 }
 
 .testimonials {
+    &__carousel{
+        display: grid;
+    }
     &__box {
         background: var(--color_in_black);
-        box-shadow: 5px 15px 33px rgba(0, 0, 0, 0.1);
         padding: clamp(3.438rem, 3.134rem + 1.52vw, 4.5rem) clamp(0.5rem, -1.661rem + 10.8vw, 8.063rem);
         @include flex;
         gap: 111px;
+
+        transition: 1s all;
+        grid-row-start: 1;
+        grid-column-start: 1;
+        z-index: 0;
     }
 
     &__box * {
@@ -610,12 +617,15 @@ body {
 }
 
 .none {
-    transform: translateX(-191px);
-    display: none;
+    transform: scale(.9);
+    z-index: 0;
 }
 
 .block {
+    transform: scale(1);
+    z-index: 1;
     display: flex;
+    box-shadow: 5px 15px 33px rgba(0, 0, 0, 0.1);
 }
 
 .banner {

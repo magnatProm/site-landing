@@ -365,14 +365,14 @@ body {
   background: var(--background_light);
 }
 .finale::before {
-  top: 0;
-  -webkit-animation: finale_1 0.5s linear 2.3s 1 alternate backwards;
-          animation: finale_1 0.5s linear 2.3s 1 alternate backwards;
+  top: 1px;
+  -webkit-animation: finale_1 0.5s linear 2.3s 1 alternate forwards;
+          animation: finale_1 0.5s linear 2.3s 1 alternate forwards;
 }
 .finale::after {
   bottom: 0;
-  -webkit-animation: finale_2 0.5s linear 2.3s 1 alternate backwards;
-          animation: finale_2 0.5s linear 2.3s 1 alternate backwards;
+  -webkit-animation: finale_2 0.5s linear 2.3s 1 alternate forwards;
+          animation: finale_2 0.5s linear 2.3s 1 alternate forwards;
 }
 
 @-webkit-keyframes finale {
@@ -680,7 +680,7 @@ body {
   background-attachment: fixed;
 }
 
-.Services__content {
+.services__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -694,10 +694,10 @@ body {
   row-gap: 56px;
   color: var(--color_in_black);
 }
-.Services .info {
+.services .info {
   opacity: 0;
 }
-._active .Services .info {
+._active .services .info {
   -webkit-animation: animati 1s cubic-bezier(0.22, 0.61, 0.36, 1) 0s 1 normal forwards;
           animation: animati 1s cubic-bezier(0.22, 0.61, 0.36, 1) 0s 1 normal forwards;
 }
@@ -725,17 +725,17 @@ body {
     opacity: 1;
   }
 }
-.Services__content * {
+.services__content * {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 305px;
           flex: 0 0 305px;
 }
 
-.Fleet__wrapper {
+.fleet__wrapper {
   padding: 50px;
 }
 @media (max-width: 530px) {
-  .Fleet__wrapper {
+  .fleet__wrapper {
     padding: 20px;
   }
 }
@@ -824,10 +824,11 @@ body {
   line-height: 33px;
 }
 
+.testimonials__carousel {
+  display: grid;
+}
 .testimonials__box {
   background: var(--color_in_black);
-  -webkit-box-shadow: 5px 15px 33px rgba(0, 0, 0, 0.1);
-          box-shadow: 5px 15px 33px rgba(0, 0, 0, 0.1);
   padding: clamp(3.438rem, 3.134rem + 1.52vw, 4.5rem) clamp(0.5rem, -1.661rem + 10.8vw, 8.063rem);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -837,6 +838,11 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   gap: 111px;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  z-index: 0;
 }
 .testimonials__box * {
   -webkit-box-flex: 1;
@@ -894,15 +900,20 @@ body {
 }
 
 .none {
-  -webkit-transform: translateX(-191px);
-          transform: translateX(-191px);
-  display: none;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  z-index: 0;
 }
 
 .block {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-shadow: 5px 15px 33px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 15px 33px rgba(0, 0, 0, 0.1);
 }
 
 .banner {
