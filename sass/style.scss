@@ -453,6 +453,13 @@ body {
     &__content * {
         flex: 0 0 305px;
     }
+
+    @media (max-width:822px) {
+        & .info {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
 }
 
 .fleet__wrapper {
@@ -522,6 +529,10 @@ body {
     @media (max-width:530px) {
         &__window {
             margin: 0px 0px;
+        }
+
+        &__carousel {
+            transition: 1s all;
         }
 
         &__box {

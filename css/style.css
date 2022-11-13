@@ -730,6 +730,13 @@ body {
       -ms-flex: 0 0 305px;
           flex: 0 0 305px;
 }
+@media (max-width: 822px) {
+  .services .info {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
 
 .fleet__wrapper {
   padding: 50px;
@@ -797,6 +804,10 @@ body {
 @media (max-width: 530px) {
   .slider__window {
     margin: 0px 0px;
+  }
+  .slider__carousel {
+    -webkit-transition: 1s all;
+    transition: 1s all;
   }
   .slider__box {
     padding: 5px;
